@@ -1,0 +1,27 @@
+﻿@model List<Data>
+@using BAL.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>This is my index page</h1>
+    @{ 
+        foreach(var elem in Model)
+        {
+            <div>
+                <p>Id: @elem.Id</p>
+                <p>Text: @elem.Text</p>
+            </div>
+        }
+    }
+</body>
+</html>
